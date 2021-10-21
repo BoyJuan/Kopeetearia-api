@@ -24,7 +24,7 @@ pipeline{
 		}
 		stage('Deploy'){
 			environment {
-        		tomcatWeb = 'C:\Users\john.alex.ocay\Documents\Boot Camp\Dev Ops\DevOps Assessment\Tomcat\apache-tomcat-9.0.54-windows-x64\apache-tomcat-9.0.54\webapps'
+        		tomcatWeb = 'C:\\Users\\john.alex.ocay\\Documents\\Boot Camp\\Dev Ops\\DevOps Assessment\\Tomcat\\apache-tomcat-9.0.54-windows-x64\\apache-tomcat-9.0.54\\webapps'
     		}
 			steps{
 				bat "copy target\\ws.war \"${tomcatWeb}\\ws.war\""
