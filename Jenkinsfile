@@ -8,12 +8,9 @@ pipeline{
 				bat 'mvn test'
 			}		
 		}
-		stage('Sonar'){
+		stage('SonarQube Analysis'){
 			steps{
 				echo 'Sonar Scanner'
-				def scannerHome = tool 'SonarQube Scanner'
-				withSonarQubeEnv('SonarQube Server') {
-					bat "${scannerHome}/bin/sonar-scanner"
 				}
 			}		
 		}
