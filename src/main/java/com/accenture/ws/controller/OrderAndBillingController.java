@@ -26,34 +26,34 @@ public class OrderAndBillingController {
 	private OrderRepository orderRepo;
 	
 	private CafeClerk clerk;
-	private static final String url = "http://localhost:4201";
+	private static final String CONST_URL = "http://localhost:4201";
 
 	@GetMapping(value = "/orders")
-	@CrossOrigin(origins = url)
+	@CrossOrigin(origins = CONST_URL)
 	public List<Order> getOrderList(){
 		return orderRepo.findAll();
 	}
 	
 	@PostMapping(value = "/add")
-	@CrossOrigin(origins = url)
+	@CrossOrigin(origins = CONST_URL)
 	public void addOrder(@RequestBody Order order) {
 		orderRepo.save(order);
 	}
 	
 	@PutMapping(value = "/update")
-	@CrossOrigin(origins = url)
+	@CrossOrigin(origins = CONST_URL)
 	public void updateOrder(@RequestBody Order order) {
 		orderRepo.save(order);
 	}
 	
 	@PostMapping(value = "/delete")
-	@CrossOrigin(origins = url)
+	@CrossOrigin(origins = CONST_URL)
 	public void deleteOrder(@RequestBody Order order) {
 		orderRepo.delete(order);
 	}
 	
 	@GetMapping(value = "/total-regular-bill")
-	@CrossOrigin(origins = url)
+	@CrossOrigin(origins = CONST_URL)
 	public OrderBill getTotalRegularBill() {
 		
 		OrderBill regularBill = new RegularBill(clerk);
@@ -66,7 +66,7 @@ public class OrderAndBillingController {
 	}
 	
 	@GetMapping(value = "/total-discounted-bill")
-	@CrossOrigin(origins = url)
+	@CrossOrigin(origins = CONST_URL)
 	public OrderBill getTotalDiscountedBill() {
 		
 		OrderBill discountedBill = new DiscountedBill(clerk);

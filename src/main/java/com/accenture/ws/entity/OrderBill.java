@@ -9,7 +9,7 @@ public abstract class OrderBill {
 	private List<Order> orderList = new ArrayList<>();
 	private CafeClerk clerk;
 	
-	public OrderBill(CafeClerk clerk) {
+	protected OrderBill(CafeClerk clerk) {
 		this.clerk = clerk;
 	}
 
