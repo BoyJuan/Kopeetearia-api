@@ -11,7 +11,7 @@ public class NewTest {
 
 
 private ChromeDriver driver;
-private String baseUrl = "http://localhost:8080/Kopeeteria-Angular";
+private String baseUrl = "http://localhost:8080/kopeetearia-angular/api";
 
 
 
