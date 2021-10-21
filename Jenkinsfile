@@ -7,17 +7,12 @@ pipeline{
 				bat "mvn clean test"
 			}		
 		}
-		stage('Sonarqube') {
-    		environment {
-        		scannerHome = tool 'SonarQube Scanner'
+  		stage('SonarQube analysis') {
+    		def scannerHome = tool 'SonarQube Scanner';
+    		withSonarQubeEnv('SonarQube'){ 
+			sh "${scannerHome}/bin/sonar-scanner"
     		}
-    		steps {
-        		withSonarQubeEnv('SonarQube') {
-            		sh "${scannerHome}/bin/sonar-scanner"
-                    }
-            		
-    		}
-		}
+ 
 		stage('Build'){
 			steps{
 				bat "mvn clean compile"
