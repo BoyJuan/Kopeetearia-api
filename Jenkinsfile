@@ -4,25 +4,23 @@ pipeline{
 	stages{
 		stage('Unit Test'){
 			steps{
-				git ''
-				bat 'mvn test'
+				bat "mvn test"
 			}		
 		}
 		stage('SonarQube Analysis'){
 			steps{
-				echo 'Sonar Scanner'
-				}
+				echo "Sonar Scanner"
+				
 			}		
 		}
 		stage('Build'){
 			steps{
-				git 'https://github.com/BoyJuan/Kopeetearia-api.git'
-				bat 'mvn clean compile'
+				bat "mvn clean compile"
 			}		
 		}
 		stage('Deploy'){
 			steps{
-				echo 'Di nako :('
+				echo "Di nako :("
 			}		
 		}
 	}
