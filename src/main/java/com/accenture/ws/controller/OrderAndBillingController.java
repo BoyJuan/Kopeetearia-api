@@ -26,7 +26,7 @@ public class OrderAndBillingController {
 	private OrderRepository orderRepo;
 	
 	private CafeClerk clerk;
-	private static final String CONST_URL = "http://localhost:4200";
+	private static final String CONST_URL = "http://localhost:8080/kopeetearia-angular/api";
 
 	@GetMapping(value = "/orders")
 	@CrossOrigin(origins = CONST_URL)
