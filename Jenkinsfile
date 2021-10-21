@@ -12,7 +12,7 @@ pipeline{
     		withSonarQubeEnv('SonarQube'){ 
 			sh "${scannerHome}/bin/sonar-scanner"
     		}
- 
+ 		}
 		stage('Build'){
 			steps{
 				bat "mvn clean compile"
