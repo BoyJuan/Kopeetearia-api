@@ -26,11 +26,7 @@ public class OrderAndBillingController {
 	private OrderRepository orderRepo;
 	
 	private CafeClerk clerk;
-	private final String url = "http://localhost:4201";
-
-//	private OrderAndBillingController(CafeClerk clerk) {
-//		this.clerk = clerk;
-//	}
+	private static final String url = "http://localhost:4201";
 
 	@GetMapping(value = "/orders")
 	@CrossOrigin(origins = url)

@@ -7,7 +7,6 @@ public class DiscountedBill extends OrderBill{
 
 	public DiscountedBill(CafeClerk clerk) {
 		super(clerk);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
